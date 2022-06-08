@@ -6,13 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="scrollable">
 
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemAlbums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/albums" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemArtists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/artists" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemFolders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/folders" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genres" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/songs" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="409dp"
+        android:layout_height="681dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

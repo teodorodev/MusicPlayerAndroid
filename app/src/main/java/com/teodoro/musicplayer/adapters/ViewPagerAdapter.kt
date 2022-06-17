@@ -3,6 +3,7 @@ package com.teodoro.musicplayer.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.teodoro.musicplayer.models.Audio
 
 class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     FragmentPagerAdapter(fm, behavior) {
@@ -19,6 +20,7 @@ class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     fun addFragment(fragment: Fragment, title: String) {
         fragmentArrayList.add(fragment)
         fragmentTitle.add(title)
+
     }
 
     override fun getPageTitle(position: Int): CharSequence? {

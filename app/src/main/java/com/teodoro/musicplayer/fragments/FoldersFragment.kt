@@ -5,12 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.ListFragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.teodoro.musicplayer.R
+import com.teodoro.musicplayer.adapters.recyclerView.FolderAdapter
+import com.teodoro.musicplayer.gambiarras.ListMusics
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private var fragmentFolders: View? = null
+
 
 /**
  * A simple [Fragment] subclass.
@@ -35,7 +43,16 @@ class FoldersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_folders, container, false)
+        fragmentFolders = inflater.inflate(R.layout.fragment_folders, container, false)
+        listeners()
+        return fragmentFolders
+    }
+
+    private fun listeners() {
+        val adapter = FolderAdapter(requireContext(), ListMusics.listFolders())
+        val recyclerView = fragmentFolders?.findViewById<RecyclerView>(R.id.recyclerFolder)
+        recyclerView?.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView?.adapter = adapter
     }
 
     companion object {

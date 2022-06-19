@@ -1,10 +1,11 @@
 package com.teodoro.musicplayer.gambiarras
 
-import com.teodoro.musicplayer.models.Audio
+import com.teodoro.musicplayer.adapters.recyclerView.SongViewHolder
+import com.teodoro.musicplayer.models.Song
 
 class ListMusics {
     companion object{
-        var MUSICAS: ArrayList<Audio> = ArrayList()
+        var MUSICAS: ArrayList<Song> = ArrayList()
 
         fun listFolders(): ArrayList<String>{
             var folders: ArrayList<String> = ArrayList()
@@ -17,5 +18,7 @@ class ListMusics {
 
             return folders
         }
+
+        lateinit var LASTSONGVIEWHOLDER: SongViewHolder
     }
 }

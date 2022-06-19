@@ -3,7 +3,6 @@ package com.teodoro.musicplayer.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.teodoro.musicplayer.models.Audio
 
 class ViewPagerAdapter(fm: FragmentManager, behavior: Int) :
     FragmentPagerAdapter(fm, behavior) {

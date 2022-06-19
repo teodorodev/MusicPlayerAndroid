@@ -1,9 +1,10 @@
 package com.teodoro.musicplayer.models
 
 
-class Audio(
+class Song(
     var path: String,
     val title: String,
     val duration: String,
-    val folders: String
+    val folders: String,
+    val artist: String
 )

@@ -1,20 +1,17 @@
 package com.teodoro.musicplayer.fragments
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.teodoro.musicplayer.MainActivity
 import com.teodoro.musicplayer.R
 import com.teodoro.musicplayer.adapters.recyclerView.SongAdapter
 import com.teodoro.musicplayer.gambiarras.ListMusics
-import com.teodoro.musicplayer.models.Audio
+import com.teodoro.musicplayer.models.Song
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,7 +34,7 @@ class SongsFragment() : Fragment() {
     private var fragmentSongs: View? = null
 
     //Arraylist para receber o a lista de musicas do MainActivity
-    private var songs: ArrayList<Audio> = ArrayList()
+    private var songs: ArrayList<Song> = ArrayList()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
